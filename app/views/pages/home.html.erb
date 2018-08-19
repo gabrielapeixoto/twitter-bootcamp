@@ -12,11 +12,11 @@
 		<% end %>
 
 		<ul>
-			<% current_user.tweets.each do |tweet|%>
-				<li><%= tweet.content %></li>
+			<% current_user.feed.each do |tweet|%>
+				<li><%= tweet.content %> - <% tweet.user.email %></li>
 			<% end %>
 		</ul>	
-		
+		<br>
 	
 		<%= link_to 'Sair', destroy_user_session_path, method: :delete %>
 	
